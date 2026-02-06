@@ -6,13 +6,15 @@ Your HTML to Markdown converter has been transformed into a comprehensive, produ
 
 ## ✅ What's Been Implemented
 
-### 1. **Bidirectional Conversion** 
+### 1. **Bidirectional Conversion**
+
 - ✅ HTML to Markdown using [Turndown](https://github.com/mixmark-io/turndown)
 - ✅ Markdown to HTML using [markdown-it](https://github.com/markdown-it/markdown-it)
 - ✅ Configurable conversion options
 - ✅ Support for complex nested structures
 
 ### 2. **Command-Line Interface (CLI)**
+
 - ✅ `html-to-md` command for HTML → Markdown conversion
 - ✅ `md-to-html` command for Markdown → HTML conversion
 - ✅ Multiple output options (file, stdout)
@@ -21,6 +23,7 @@ Your HTML to Markdown converter has been transformed into a comprehensive, produ
 - ✅ Error handling and validation
 
 ### 3. **VS Code Extension**
+
 - ✅ Full VS Code extension implementation
 - ✅ Commands for both conversion directions
 - ✅ Keyboard shortcuts (Cmd/Ctrl+Alt+M and Cmd/Ctrl+Alt+H)
@@ -29,6 +32,7 @@ Your HTML to Markdown converter has been transformed into a comprehensive, produ
 - ✅ Ready to package and publish
 
 ### 4. **Testing & Quality**
+
 - ✅ Comprehensive Jest test suite (19 tests, all passing)
 - ✅ Unit tests for all conversion functions
 - ✅ Round-trip conversion tests
@@ -37,6 +41,7 @@ Your HTML to Markdown converter has been transformed into a comprehensive, produ
 - ✅ 100% test pass rate
 
 ### 5. **CI/CD & Automation**
+
 - ✅ GitHub Actions CI workflow
   - Tests on Node.js 14, 16, 18, 20
   - Linting and formatting checks
@@ -49,6 +54,7 @@ Your HTML to Markdown converter has been transformed into a comprehensive, produ
   - Triggered by version tags
 
 ### 6. **Documentation**
+
 - ✅ **README.md** - Comprehensive project overview with:
   - Feature highlights
   - Installation instructions
@@ -62,11 +68,13 @@ Your HTML to Markdown converter has been transformed into a comprehensive, produ
 - ✅ **LICENSE** - MIT License
 
 ### 7. **GitHub Templates**
+
 - ✅ Bug report template
 - ✅ Feature request template
 - ✅ Pull request template
 
 ### 8. **Project Configuration**
+
 - ✅ Package.json with all dependencies and scripts
 - ✅ Jest configuration
 - ✅ ESLint configuration
@@ -169,13 +177,16 @@ npm run package           # Creates .vsix file
 ## 🔄 Conversion Examples
 
 ### HTML → Markdown
+
 **Input (HTML):**
+
 ```html
 <h1>Welcome to HTML-Markdown Converter</h1>
 <p>This is a <strong>sample HTML file</strong>.</p>
 ```
 
 **Output (Markdown):**
+
 ```markdown
 # Welcome to HTML-Markdown Converter
 
@@ -183,7 +194,9 @@ This is a **sample HTML file**.
 ```
 
 ### Markdown → HTML
+
 **Input (Markdown):**
+
 ```markdown
 # Hello World
 
@@ -191,6 +204,7 @@ This is **bold** and _italic_ text.
 ```
 
 **Output (HTML):**
+
 ```html
 <h1>Hello World</h1>
 <p>This is <strong>bold</strong> and <em>italic</em> text.</p>
@@ -201,6 +215,7 @@ This is **bold** and _italic_ text.
 Before publishing to npm and VS Code Marketplace:
 
 ### For npm:
+
 - [ ] Update version in `package.json`
 - [ ] Update `CHANGELOG.md`
 - [ ] Update repository URL in `package.json`
@@ -210,6 +225,7 @@ Before publishing to npm and VS Code Marketplace:
 - [ ] Run `npm publish` to publish
 
 ### For VS Code Marketplace:
+
 - [ ] Update version in `vscode-extension/package.json`
 - [ ] Create icon image at `vscode-extension/images/icon.png`
 - [ ] Update publisher name in manifest
@@ -219,6 +235,7 @@ Before publishing to npm and VS Code Marketplace:
 - [ ] Run `npm run publish` with VSCE_PAT token
 
 ### For GitHub:
+
 - [ ] Initialize git repository: `git init`
 - [ ] Add remote: `git remote add origin <your-repo-url>`
 - [ ] Commit all files: `git add . && git commit -m "Initial release"`
@@ -228,6 +245,7 @@ Before publishing to npm and VS Code Marketplace:
 ## 🎯 Next Steps
 
 1. **Initialize Git Repository** (if not done)
+
    ```bash
    git init
    git add .
@@ -244,10 +262,12 @@ Before publishing to npm and VS Code Marketplace:
    - `VSCE_PAT` - For VS Code Marketplace publishing
 
 4. **Publish First Release**
+
    ```bash
    git tag v1.0.0
    git push origin v1.0.0
    ```
+
    This triggers the release workflow automatically!
 
 5. **Promote Your Project**
@@ -259,13 +279,15 @@ Before publishing to npm and VS Code Marketplace:
 ## ⚙️ Configuration Options
 
 ### HTML to Markdown Options
+
 - `headingStyle`: 'atx' or 'setext'
 - `codeBlockStyle`: 'fenced' or 'indented'
-- `bulletListMarker`: '-', '+', or '*'
-- `emDelimiter`: '_' or '*'
-- `strongDelimiter`: '**' or '__'
+- `bulletListMarker`: '-', '+', or '\*'
+- `emDelimiter`: '\_' or '\*'
+- `strongDelimiter`: '\*\*' or '\_\_'
 
 ### Markdown to HTML Options
+
 - `html`: Enable HTML tags in source
 - `linkify`: Auto-detect URLs
 - `typographer`: Smart quotes and replacements

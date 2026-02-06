@@ -17,15 +17,16 @@
 ## Related Issues
 
 <!-- Link to related issues -->
+
 Fixes #(issue number)
 
 ## Changes Made
 
 <!-- List the specific changes made in this PR -->
 
-- 
-- 
-- 
+-
+-
+-
 
 ## Testing
 
@@ -33,9 +34,8 @@ Fixes #(issue number)
 
 - [ ] All existing tests pass
 - [ ] Added new tests for new features
-- [ ] Tested manually with the following scenarios:
-  - 
-  - 
+- [ ] ## Tested manually with the following scenarios:
+  -
 
 ## Screenshots (if applicable)
 

@@ -4,7 +4,6 @@
   "description": "Bidirectional HTML to Markdown and Markdown to HTML converter",
   "version": "1.0.0",
   "publisher": "jasdeepkhalsa",
-  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.80.0"
   },

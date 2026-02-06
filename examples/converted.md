@@ -1,4 +1,4 @@
-  Example HTML File
+Example HTML File
 
 # Welcome to HTML-Markdown Converter
 
@@ -6,9 +6,9 @@ This is a **sample HTML file** to demonstrate the conversion capabilities.
 
 ## Features
 
-*   Convert HTML to Markdown
-*   Convert Markdown to HTML
-*   CLI and VS Code extension
+- Convert HTML to Markdown
+- Convert Markdown to HTML
+- CLI and VS Code extension
 
 ## Code Example
 

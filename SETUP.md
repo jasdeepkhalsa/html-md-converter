@@ -68,6 +68,7 @@ npm run package
 ```
 
 To install the extension in VS Code:
+
 1. Open VS Code
 2. Press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux)
 3. Type "Install from VSIX"

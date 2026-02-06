@@ -20,7 +20,7 @@ We take the security of our project seriously. If you believe you have found a s
 
 ### Please DO:
 
-1. **Email us directly** at [security@yourdomain.com] with:
+1. **Email us directly** at [security@jasdeepkhalsa.com] with:
    - A description of the vulnerability
    - Steps to reproduce the issue
    - Potential impact
@@ -56,6 +56,7 @@ When using this tool:
 ## Dependency Security
 
 We use:
+
 - `npm audit` to check for known vulnerabilities
 - GitHub Dependabot to automatically update dependencies
 - GitHub Actions to run security checks on every PR
