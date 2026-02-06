@@ -1,0 +1,78 @@
+{
+  "name": "html-md-converter-vscode",
+  "displayName": "HTML-Markdown Converter",
+  "description": "Bidirectional HTML to Markdown and Markdown to HTML converter",
+  "version": "1.0.0",
+  "publisher": "jasdeepkhalsa",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "html",
+    "markdown",
+    "converter",
+    "format"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "html-md-converter.htmlToMarkdown",
+        "title": "Convert HTML to Markdown"
+      },
+      {
+        "command": "html-md-converter.markdownToHtml",
+        "title": "Convert Markdown to HTML"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "html-md-converter.htmlToMarkdown",
+        "key": "ctrl+alt+m",
+        "mac": "cmd+alt+m"
+      },
+      {
+        "command": "html-md-converter.markdownToHtml",
+        "key": "ctrl+alt+h",
+        "mac": "cmd+alt+h"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "html-md-converter.htmlToMarkdown",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "html-md-converter.markdownToHtml",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "@vscode/vsce": "^2.22.0"
+  },
+  "dependencies": {
+    "turndown": "^7.2.2",
+    "markdown-it": "^14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasdeepkhalsa/html-md-converter.git"
+  },
+  "license": "MIT"
+}

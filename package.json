@@ -1,0 +1,50 @@
+{
+  "name": "html-md-converter",
+  "version": "1.0.0",
+  "description": "A bidirectional HTML to Markdown and Markdown to HTML converter with CLI and VS Code extension support",
+  "main": "src/index.js",
+  "bin": {
+    "html-to-md": "./bin/html-to-md.js",
+    "md-to-html": "./bin/md-to-html.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.js bin/**/*.js",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "prepare": "npm run format"
+  },
+  "keywords": [
+    "html",
+    "markdown",
+    "converter",
+    "cli",
+    "vscode-extension",
+    "turndown",
+    "markdown-it"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "turndown": "^7.2.2",
+    "markdown-it": "^14.0.0",
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasdeepkhalsa/html-md-converter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jasdeepkhalsa/html-md-converter/issues"
+  },
+  "homepage": "https://github.com/jasdeepkhalsa/html-md-converter#readme"
+}
