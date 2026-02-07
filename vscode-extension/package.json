@@ -56,6 +56,11 @@
       ]
     }
   },
+  "files": [
+    "extension.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "lint": "eslint .",
     "package": "vsce package",
