@@ -1,7 +1,7 @@
 # HTML-Markdown Converter
 
 [![CI](https://github.com/jasdeepkhalsa/html-md-converter/actions/workflows/ci.yml/badge.svg)](https://github.com/jasdeepkhalsa/html-md-converter/actions/workflows/ci.yml)
-[![npm version](https://badge.fury.io/js/html-md-converter.svg)](https://badge.fury.io/js/html-md-converter)
+[![npm version](https://badge.fury.io/js/html-md-converter.svg?v=1)](https://badge.fury.io/js/html-md-converter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A powerful, bidirectional converter between HTML and Markdown with both CLI and VS Code extension support.
@@ -85,7 +85,7 @@ md-to-html input.md --no-linkify
 ### Programmatic API
 
 ```javascript
-const { htmlToMarkdown, markdownToHtml } = require('html-md-converter');
+import { htmlToMarkdown, markdownToHtml } from 'html-md-converter';
 
 // HTML to Markdown
 const html = '<h1>Hello World</h1><p>This is a paragraph.</p>';
