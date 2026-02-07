@@ -33,4 +33,3 @@ export function markdownToHtml(markdown, options = {}) {
 
   return md.render(markdown);
 }
-

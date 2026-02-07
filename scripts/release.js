@@ -77,4 +77,3 @@ runCommand('git push origin main');
 runCommand(`git push origin ${tagName}`);
 
 console.log(`\nSuccessfully released ${tagName}! 🎉`);
-
