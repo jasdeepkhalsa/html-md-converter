@@ -1,9 +1,7 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const { program } = require('commander');
-const chalk = require('chalk');
-const { htmlToMarkdown } = require('../src/index');
+import fs from 'fs';
+import { program } from 'commander';
+import chalk from 'chalk';
+import { htmlToMarkdown } from '../src/index.js';
 
 program
   .name('html-to-md')
@@ -50,3 +48,4 @@ program
   });
 
 program.parse();
+

@@ -3,12 +3,13 @@
   "version": "1.0.1",
   "description": "A bidirectional HTML to Markdown and Markdown to HTML converter with CLI and VS Code extension support",
   "main": "src/index.js",
+  "type": "module",
   "bin": {
     "html-to-md": "./bin/html-to-md.js",
     "md-to-html": "./bin/md-to-html.js"
   },
   "scripts": {
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:watch": "jest --watch",
     "lint": "eslint src/**/*.js bin/**/*.js",
     "format": "prettier --write \"**/*.{js,json,md}\"",

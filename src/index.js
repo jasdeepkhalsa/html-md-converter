@@ -1,5 +1,5 @@
-const TurndownService = require('turndown');
-const MarkdownIt = require('markdown-it');
+import TurndownService from 'turndown';
+import MarkdownIt from 'markdown-it';
 
 /**
  * Convert HTML to Markdown
@@ -7,7 +7,7 @@ const MarkdownIt = require('markdown-it');
  * @param {Object} options - Options for turndown service
  * @returns {string} - The converted markdown string
  */
-function htmlToMarkdown(html, options = {}) {
+export function htmlToMarkdown(html, options = {}) {
   const turndownService = new TurndownService({
     headingStyle: 'atx',
     codeBlockStyle: 'fenced',
@@ -23,7 +23,7 @@ function htmlToMarkdown(html, options = {}) {
  * @param {Object} options - Options for markdown-it
  * @returns {string} - The converted HTML string
  */
-function markdownToHtml(markdown, options = {}) {
+export function markdownToHtml(markdown, options = {}) {
   const md = new MarkdownIt({
     html: true,
     linkify: true,
@@ -34,7 +34,3 @@ function markdownToHtml(markdown, options = {}) {
   return md.render(markdown);
 }
 
-module.exports = {
-  htmlToMarkdown,
-  markdownToHtml
-};

@@ -1,4 +1,4 @@
-const { htmlToMarkdown, markdownToHtml } = require('../src/index');
+import { htmlToMarkdown, markdownToHtml } from '../src/index.js';
 
 describe('htmlToMarkdown', () => {
   test('converts basic HTML to Markdown', () => {
@@ -120,7 +120,7 @@ Paragraph with **bold** and _italic_.
 - Item 1
 - Item 2
     `;
-    const result = markdownToHtml(markdown);
+    const result = markdownToHtml(markdown, { linkify: true, typographer: true });
     expect(result).toContain('<h2>Title</h2>');
     expect(result).toContain('<strong>bold</strong>');
     expect(result).toContain('<em>italic</em>');
@@ -154,3 +154,4 @@ describe('Round-trip conversion', () => {
     expect(resultMd).toContain('**bold**');
   });
 });
+
