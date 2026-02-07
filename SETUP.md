@@ -112,6 +112,7 @@ npm run release patch -- --force-tag
 ```
 
 This script will automatically:
+
 1. Update `version` in both root `package.json` and `vscode-extension/package.json`.
 2. Create a git commit: `chore: release vX.Y.Z`.
 3. Create a local git tag.
