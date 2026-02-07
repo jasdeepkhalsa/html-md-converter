@@ -23,6 +23,13 @@
     "turndown",
     "markdown-it"
   ],
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {

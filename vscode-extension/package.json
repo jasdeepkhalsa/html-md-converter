@@ -17,6 +17,11 @@
     "converter",
     "format"
   ],
+  "files": [
+    "extension.js",
+    "README.md",
+    "LICENSE"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [

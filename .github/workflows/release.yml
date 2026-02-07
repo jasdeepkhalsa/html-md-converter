@@ -8,6 +8,9 @@ on:
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,7 +28,7 @@ jobs:
         run: npm test
       
       - name: Publish to npm
-        run: npm publish
+        run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   
@@ -53,7 +56,7 @@ jobs:
       - name: Publish to VS Code Marketplace
         run: |
           cd vscode-extension
-          npm run publish
+          npx @vscode/vsce publish --no-git-tag-check
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
   
