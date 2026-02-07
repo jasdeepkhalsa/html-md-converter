@@ -1,6 +1,6 @@
 {
   "name": "html-md-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A bidirectional HTML to Markdown and Markdown to HTML converter with CLI and VS Code extension support",
   "main": "src/index.js",
   "bin": {
@@ -12,7 +12,8 @@
     "test:watch": "jest --watch",
     "lint": "eslint src/**/*.js bin/**/*.js",
     "format": "prettier --write \"**/*.{js,json,md}\"",
-    "prepare": "npm run format"
+    "prepare": "npm run format",
+    "release": "node scripts/release.js"
   },
   "keywords": [
     "html",

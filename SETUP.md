@@ -80,7 +80,7 @@ The project includes two GitHub Actions workflows:
 
 1. **CI Workflow** (`.github/workflows/ci.yml`)
    - Runs on every push and PR
-   - Tests on multiple Node.js versions (14, 16, 18, 20)
+   - Tests on multiple Node.js versions (18, 20, 22)
    - Runs linting and formatting checks
    - Generates code coverage reports
 
@@ -90,21 +90,46 @@ The project includes two GitHub Actions workflows:
    - Publishes VS Code extension to marketplace
    - Creates GitHub release
 
-## Publishing
+### Release Automation (Recommended)
 
-### To npm
+The project includes a release automation script that syncs versions across the core library and the VS Code extension, handles tagging, and pushes to GitHub.
 
 ```bash
-# Update version in package.json
-npm version patch  # or minor, or major
+# Release a patch version (1.0.0 -> 1.0.1)
+npm run release
 
-# Publish
-npm publish
+# Release a minor version (1.0.0 -> 1.1.0)
+npm run release minor
+
+# Release a major version (1.0.0 -> 2.0.0)
+npm run release major
+
+# Release a specific version
+npm run release 1.2.3
+
+# Force-update an existing tag (deletes and re-creates on GitHub)
+npm run release patch -- --force-tag
 ```
 
-### To VS Code Marketplace
+This script will automatically:
+1. Update `version` in both root `package.json` and `vscode-extension/package.json`.
+2. Create a git commit: `chore: release vX.Y.Z`.
+3. Create a local git tag.
+4. Push the branch and the tag to GitHub (triggering the Release Workflow).
 
-You need a Personal Access Token (PAT) from Azure DevOps:
+### Manual Publishing (Fallback)
+
+#### To npm
+
+```bash
+# Update version
+npm version patch
+
+# Publish
+npm publish --access public
+```
+
+#### To VS Code Marketplace
 
 ```bash
 cd vscode-extension

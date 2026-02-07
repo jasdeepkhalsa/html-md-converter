@@ -2,7 +2,7 @@
   "name": "html-md-converter-vscode",
   "displayName": "HTML-Markdown Converter",
   "description": "Bidirectional HTML to Markdown and Markdown to HTML converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "jasdeepkhalsa",
   "engines": {
     "vscode": "^1.80.0"
