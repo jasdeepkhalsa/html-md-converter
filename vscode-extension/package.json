@@ -58,8 +58,7 @@
   },
   "files": [
     "extension.js",
-    "README.md",
-    "LICENSE"
+    "README.md"
   ],
   "scripts": {
     "lint": "eslint .",
