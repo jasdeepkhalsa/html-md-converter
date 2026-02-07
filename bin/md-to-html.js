@@ -1,9 +1,7 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const { program } = require('commander');
-const chalk = require('chalk');
-const { markdownToHtml } = require('../src/index');
+import fs from 'fs';
+import { program } from 'commander';
+import chalk from 'chalk';
+import { markdownToHtml } from '../src/index.js';
 
 program
   .name('md-to-html')
