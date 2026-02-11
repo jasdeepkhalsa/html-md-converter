@@ -1,0 +1,51 @@
+name: Manual Release (run scripts/release.js)
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "SemVer version to release (e.g. 1.1.0) or release type (patch|minor|major). If providing a full version, omit leading 'v'."
+        required: true
+        default: 'patch'
+      force_tag:
+        description: 'Set to true to force-delete existing tag before creating'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  run-release-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Configure git committer
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Run release script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ github.event.inputs.version }}"
+          # strip leading v if present
+          VERSION="${VERSION#v}"
+          FORCE="${{ github.event.inputs.force_tag }}"
+          echo "Running scripts/release.js with version='$VERSION' force='$FORCE'"
+          if [ "$FORCE" = "true" ] || [ "$FORCE" = "True" ]; then
+            node scripts/release.js "$VERSION" --force-tag
+          else
+            node scripts/release.js "$VERSION"
+          fi
