@@ -108,3 +108,9 @@ jobs:
           echo "| Triggered by | @${{ github.actor }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "The tag push will start the **Release** workflow automatically." >> "$GITHUB_STEP_SUMMARY"
+
+  call-release:
+    name: Publish packages
+    needs: release
+    uses: ./.github/workflows/release.yml
+    secrets: inherit
