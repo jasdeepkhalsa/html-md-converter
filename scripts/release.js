@@ -61,7 +61,16 @@ const tagName = `v${newVersion}`;
 
 // Git workflow
 runCommand('git add .');
-runCommand(`git commit -m "chore: release ${tagName}"`);
+
+// Check if there are changes to commit
+try {
+  execSync('git diff --staged --quiet', { encoding: 'utf8' });
+  console.log('No version changes detected (already at this version)');
+} catch (_e) {
+  // There are changes, commit them
+  runCommand(`git commit -m "chore: release ${tagName}"`);
+  runCommand('git push origin main');
+}
 
 if (isForceTag) {
   try {
@@ -73,7 +82,6 @@ if (isForceTag) {
 }
 
 runCommand(`git tag ${tagName}`);
-runCommand('git push origin main');
 runCommand(`git push origin ${tagName}`);
 
 console.log(`\nSuccessfully released ${tagName}! 🎉`);
