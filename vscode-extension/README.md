@@ -1,14 +1,19 @@
 # VS Code Extension: HTML-Markdown Converter
 
-This extension provides bidirectional conversion between HTML and Markdown directly in VS Code.
+- [![CI](https://github.com/jasdeepkhalsa/html-md-converter/actions/workflows/ci.yml/badge.svg)](https://github.com/jasdeepkhalsa/html-md-converter/actions/workflows/ci.yml)
+- [![npm version](https://badge.fury.io/js/html-md-converter.svg?v=1)](https://badge.fury.io/js/html-md-converter)
+- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Features
+A lightweight VS Code extension that provides fast, bidirectional conversion between HTML and Markdown directly in the editor.
 
-- Convert HTML to Markdown
-- Convert Markdown to HTML
-- Works on selected text or entire file
-- Keyboard shortcuts for quick access
-- Context menu integration
+## ✨ Features
+
+- 🔄 **Bidirectional Conversion**: Convert HTML to Markdown and Markdown to HTML
+- 💻 **Editor Integration**: Works on selected text or the entire file
+- ⌨️ **Keyboard Shortcuts**: Quick conversion with configurable shortcuts
+- 🖱️ **Context Menu**: Right-click to convert selected content
+- ⚡ **Fast & Reliable**: Built on [Turndown](https://github.com/mixmark-io/turndown) and [markdown-it](https://github.com/markdown-it/markdown-it)
+- 📦 **Zero Config**: Works out of the box with sensible defaults
 
 ## Usage
 

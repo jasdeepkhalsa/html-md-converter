@@ -60,7 +60,9 @@
   "files": [
     "extension.js",
     "README.md",
-    "icon.png"
+    "icon.png",
+    "LICENSE",
+    "node_modules"
   ],
   "scripts": {
     "lint": "eslint .",
